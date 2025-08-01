@@ -1,8 +1,8 @@
-function calculatetax(income: number, taxyear: number) {
-  if (taxyear < 2020) return income * 1.2;
-  return income * 1.3;
+function kg(weight: number | string): number {
+  if (typeof weight === "number") return weight * 2.2;
+  else return parseInt(weight) * 2.2;
 }
 
-let tax1 = calculatetax(20000, 2021);
+console.log("Your Answer is ->", kg(20));
+console.log("Your Answer is ->", kg("40"));
 
-console.log(tax1);

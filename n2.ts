@@ -5,4 +5,4 @@ function kg(weight: number | string): number {
 
 console.log("Your Answer is ->", kg(20));
 console.log("Your Answer is ->", kg("40"));
-
+ 

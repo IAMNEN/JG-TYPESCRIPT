@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Banking App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+      padding: 20px;
+    }
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    input, button {
+      padding: 10px;
+      margin: 5px 0;
+      width: 100%;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #4588a0;
+    }
+    .transaction {
+      background: #f9f9f9;
+      padding: 8px;
+      margin: 5px 0;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Banking App</h2>
+  <h3 id="balance">Balance: ₹0</h3>
+
+  <input type="number" id="amount" placeholder="Enter amount" />
+  <button onclick="deposit()">Deposit</button>
+  <button onclick="withdraw()">Withdraw</button>
+
+  <h3>Transaction History</h3>
+  <div id="history"></div>
+</div>
+
+<script>
+  let balance = 0;
+  let history = [];
+
+  function updateBalance() {
+    document.getElementById("balance").innerText = `Balance: ₹${balance}`;
+  }
+
+  function updateHistory() {
+    let historyDiv = document.getElementById("history");
+    historyDiv.innerHTML = "";
+    history.forEach(item => {
+      let div = document.createElement("div");
+      div.className = "transaction";
+      div.innerText = item;
+      historyDiv.appendChild(div);
+    });
+  }
+
+  function deposit() {
+    let amount = parseFloat(document.getElementById("amount").value);
+    if (amount > 0) {
+      balance += amount;
+      history.unshift(`Deposited ₹${amount}`);
+      updateBalance();
+      updateHistory();
+    } else {
+      alert("Enter a valid amount");
+    }
+  }
+
+  function withdraw() {
+    let amount = parseFloat(document.getElementById("amount").value);
+    if (amount > 0 && amount <= balance) {
+      balance -= amount;
+      history.unshift(`Withdrew ₹${amount}`);
+      updateBalance();
+      updateHistory();
+    } else {
+      alert("Insufficient funds or invalid amount");
+    }
+  }
+</script>
+
+</body>
+</html>

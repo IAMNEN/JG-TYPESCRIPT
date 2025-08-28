@@ -19,3 +19,4 @@ const std3: student2 = {
 };
 
 console.log("information ->", std3);
+

@@ -15,7 +15,7 @@ var user = {
     add: { city: "Ahmedabad", zip: "380015" },
 };
 var userClone = __assign({}, user);
-userClone.name = "Amit";
+userClone.name = "Amit😁";
 userClone.add.city = "Surat";
 console.log("original person:", user);
 console.log("clone value is:", userClone);

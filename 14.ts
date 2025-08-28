@@ -14,7 +14,7 @@ const user: Person = {
   add: { city: "Ahmedabad", zip: "380015" },
 };
 
-const userClone = {...user};
+const userClone = { ...user };
 
 userClone.name = "Amit";
 

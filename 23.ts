@@ -15,12 +15,12 @@ class Student extends Person {
   course: string;
 
   constructor(name: string, age: number, course: string) {
-    super(name, age); // call parent constructor
+    super(name, age); 
     this.course = course;
   }
 
   displayDetails() {
-    super.displayDetails(); // show name and age
+    super.displayDetails(); 
     console.log(`Course: ${this.course}`);
   }
 }

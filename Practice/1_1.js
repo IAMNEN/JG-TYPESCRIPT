@@ -1,0 +1,14 @@
+var name1 = "Nen";
+var age1 = 19;
+var status1 = true;
+var unknowntype1 = "empty";
+var abc1 = undefined;
+var nothing1 = null;
+var xyz1 = undefined;
+console.log(name1);
+console.log(age1);
+console.log(status1);
+console.log(unknowntype1);
+console.log(abc1);
+console.log(nothing1);
+console.log(xyz1);

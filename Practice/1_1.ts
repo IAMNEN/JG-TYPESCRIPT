@@ -1,0 +1,14 @@
+let name1: string = "Nen";
+let age1: number = 19;
+let status1: boolean = true;
+let unknowntype1: any = "empty";
+let abc1: void = undefined;
+let nothing1: null = null;
+let xyz1: undefined = undefined;
+console.log(name1);
+console.log(age1);
+console.log(status1);
+console.log(unknowntype1);
+console.log(abc1);
+console.log(nothing1);
+console.log(xyz1);
